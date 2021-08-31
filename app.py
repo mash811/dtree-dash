@@ -21,8 +21,8 @@ import os # for Heroku
 app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
 server = app.server
 
-app.scripts.config.serve_locally = False
-app.css.config.serve_locally = False
+app.scripts.config.serve_locally = True
+app.css.config.serve_locally = True
 app.config.assets_external_path = "/"    # The external prefix if serve_locally == False
 
 
