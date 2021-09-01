@@ -439,10 +439,10 @@ app.clientside_callback(
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
     
     ga('create', 'UA-199659346-1', 'auto');
-    ga('send', 'pageview');
+    ga('send', 'pageview', '/click/node.html');
     """,
-    Input('cytoscape', 'tapNode'),
-    Output('cytoscape', 'tapNode')
+    Output("error", "data"),
+    Input('cytoscape', 'tapNode')
 )
 
 
