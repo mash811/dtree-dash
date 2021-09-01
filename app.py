@@ -14,11 +14,15 @@ import dash_table
 import dash_cytoscape as cyto
 import os # for Heroku
 
-# In[3]:
+
+# external JavaScript files
+external_scripts = [
+    {'src':'assets/gtag.js'},
+    {'src':'assets/gtag_new.js'}
+]
 
 
-
-app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
+app = dash.Dash(external_scripts=external_scripts, external_stylesheets=[dbc.themes.BOOTSTRAP])
 server = app.server
 
 app.scripts.config.serve_locally = True
