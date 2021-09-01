@@ -430,6 +430,7 @@ def displayTapNode(data):
         return "\n".join([label, imp, cond])
     else:
         return ""
+    
 app.clientside_callback(
     """
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -439,7 +440,10 @@ app.clientside_callback(
     
     ga('create', 'UA-199659346-1', 'auto');
     ga('send', 'pageview', '/click/node.html'); 
-    """
+    """,
+    
+    Output('selected-node-data', 'children'),
+    Input('cytoscape', 'tapNode')
 )
 
 # In[19]:
