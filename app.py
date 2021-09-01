@@ -326,7 +326,7 @@ app.layout = dbc.Container([
     dbc.Row(
             [
                 dbc.Col(
-                    html.H4(""),
+                    html.Div(children=[html.H4("")], id='forGA'),
                     style={
                         "backgroundColor": "#fff",
                         "color": "#34495e",
@@ -441,7 +441,7 @@ app.clientside_callback(
     ga('create', 'UA-199659346-1', 'auto');
     ga('send', 'pageview', '/click/node.html');
     """,
-    Output("selected-node-data", "children"),
+    Output("forGA", "children"),
     Input('cytoscape', 'tapNode')
 )
 
