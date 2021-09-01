@@ -22,7 +22,7 @@ external_scripts = [
 ]
 
 
-app = dash.Dash(external_scripts=external_scripts, external_stylesheets=[dbc.themes.BOOTSTRAP])
+app = dash.Dash(__name__, external_scripts=external_scripts, external_stylesheets=[dbc.themes.BOOTSTRAP])
 server = app.server
 
 app.scripts.config.serve_locally = True
