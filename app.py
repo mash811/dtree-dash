@@ -441,7 +441,8 @@ app.clientside_callback(
     ga('create', 'UA-199659346-1', 'auto');
     ga('send', 'pageview');
     """,
-    Input('cytoscape', 'tapNode')
+    Input('cytoscape', 'tapNode'),
+    Output('cytoscape', 'tapNode')
 )
 
 
