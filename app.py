@@ -441,7 +441,7 @@ app.clientside_callback(
     ga('create', 'UA-199659346-1', 'auto');
     ga('send', 'pageview', '/click/node.html');
     """,
-    Output("error", "data"),
+    Output("selected-node-data", "children"),
     Input('cytoscape', 'tapNode')
 )
 
