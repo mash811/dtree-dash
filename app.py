@@ -194,7 +194,7 @@ default_stylesheet = [
         'selector': ':selected',
         'style': {
             'font-size': 18,
-            "backgroundColor": "#888888",
+            "backgroundColor": "#e67e22",
             'opacity': 1,
         }
     },
@@ -312,7 +312,7 @@ controls = dbc.Card(
 )
 
 info = dbc.Card([
-    dbc.Label("selected node"),
+    dbc.Label("Select one of the nodes"),
     html.Div(children=[
             html.Pre(
                 id='selected-node-data',
