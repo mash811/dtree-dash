@@ -25,6 +25,7 @@ external_scripts = [
 app = dash.Dash(__name__, external_scripts=external_scripts, external_stylesheets=[dbc.themes.BOOTSTRAP])
 server = app.server
 
+app.title = "breast_cancer"
 app.scripts.config.serve_locally = True
 app.css.config.serve_locally = True
 app.config.assets_external_path = "/"    # The external prefix if serve_locally == False
